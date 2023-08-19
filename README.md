@@ -1,66 +1,39 @@
-# MLOps Project - Stack Exchange Question Classification
+# Customer Churn Prediction with MLOps <br>
+**Overview** <br>
+This project focuses on building a machine learning model to predict customer churn and demonstrates MLOps best practices. Customer churn prediction is a critical task for businesses, and this project showcases how to develop, deploy, and manage a churn prediction model efficiently.<br>
 
-![image](https://github.com/shivam-gupta0/MLOps-Project/assets/85798077/7dfe89ad-8417-4847-8610-8e794ae94b41)
+**Features** <br>
+Jupyter Notebooks: The project is structured using Jupyter Notebooks for a clear and interactive development process.<br>
 
-# Overview <br>
-This MLOps project serves as an educational resource for understanding and implementing Machine Learning Operations (MLOps) principles and tools in the context of Stack Exchange question classification. It aims to guide learners through the process of building a machine learning solution while seamlessly integrating essential MLOps practices.<br><br><br>
+MLflow: MLflow is used for tracking experiments, packaging code into reproducible runs, and managing model versions. The project leverages MLflow to ensure model reproducibility and easy model management.<br>
 
-# Table of Contents<br>
-Data Preparation<br>
-Feature Engineering<br>
-Model Training<br>
-Model Evaluation<br>
-Textual Features<br>
-Conclusion<br>
-<br><br>
-# Data Preparation<br>
-**DVC (Data Version Control)** <br>
-To ensure reproducibility and version control, we utilize DVC (Data Version Control) for managing our dataset. DVC allows us to: <br>
+PyCaret: PyCaret is a powerful library for automating machine learning workflows. It streamlines the model development process and enables easy model comparison and selection.<br>
 
-Version and store our dataset efficiently.<br>
-Track changes and versions in a Git-like fashion.<br>
-Collaborate with team members while maintaining data integrity.<br>
-Ensure data traceability throughout the project.<br>
-The dataset is sourced from the Cross Validated Stack Exchange API and stored using DVC. This approach ensures data consistency and traceability throughout the project.<br><br><br>
+**Project Structure** <br>
+This repository contains the following notebooks:<br><br>
 
-# Feature Engineering<br>
-Robust feature engineering is fundamental to successful machine learning. We engineer our dataset, including numerical features and labels, while maintaining data lineage using DVC. Key feature engineering steps include: <br>
+1. mlflow_churn_model_registration.ipynb<br>
+This notebook demonstrates how to register a churn prediction model using MLflow. Key highlights include:<br>
 
-Conversion of creation dates to numerical format. <br>
-Removal of irrelevant features like 'FavoriteCount'.<br>
-Calculation of text lengths for 'Title' and 'Body'.<br>
-Labeling questions as machine learning-related based on their 'Tags'.<br><br><br>
-# Model Training<br>
-Our MLOps approach extends to model training, facilitated by MLOps libraries like DVC. We manage model versions and experiment tracking using: <br>
+Setting up MLflow tracking to log experiments and model versions.<br>
+Using PyCaret to perform automated machine learning experiments.<br>
+Selecting the best model and visualizing its performance.<br>
+Saving the final model pipeline for deployment.<br><br>
+2. churn_model_development.ipynb<br>
+This notebook focuses on the development of the churn prediction model and its registration with MLflow. It includes:<br>
 
-**MLflow**<br>
-MLflow allows us to:<br>
+Setting up MLflow tracking.<br>
+Data preprocessing and setup using PyCaret.<br>
+Model training, selection, and evaluation.<br>
+Saving the best model for deployment.<br><br>
+**Usage**<br>
+To run these notebooks, follow these steps:<br>
 
-Track and manage experiments.<br>
-Log parameters, metrics, and artifacts.<br>
-Compare and reproduce experiments easily.<br>
-Maintain a clear experiment history.<br>
-An initial logistic regression model is trained on the engineered numeric features, making it easy to track model versions and performance.<br><br><br>
+Install the required libraries by running pip install mlflow==2 pycaret.<br>
 
-# Model Evaluation<br>
-Model evaluation is conducted using DVC-tracked data and model versions. We emphasize precision-recall curves and ROC curves due to class imbalance. We also compare our model results to baseline models, enhancing the project's transparency.<br>
+Set up the necessary environment variables, such as MLFLOW_TRACKING_USERNAME, MLFLOW_TRACKING_PASSWORD, and MLFLOW_TRACKING_URI.<br>
 
-# Textual Features <br>
-In the next phase, we harness the power of textual features, such as 'Title' and 'Body,' to further improve classification performance. We employ TF-IDF vectorization and train a logistic regression model on these features, all managed with DVC.<br><br><br>
+Run the notebooks in a Jupyter environment, such as Google Colab.<br>
 
-# MLOps Integration
-This project showcases a complete MLOps workflow, from data versioning with DVC to model versioning and experiment tracking. By integrating MLOps libraries like DVC and MLflow, we ensure: <br>
-
-Reproducibility: Easily reproduce experiments and results.<br>
-Collaboration: Collaborate with team members seamlessly.<br>
-Model Versioning: Keep track of model versions and their performance.<br>
-Experiment Tracking: Log and compare experiments for model improvement.<br>
-Data Lineage: Trace data changes throughout the pipeline.<br><br><br>
-
-# Conclusion <br>
-In conclusion, this MLOps project takes a teaching-oriented approach, guiding learners through the process of implementing MLOps principles and tools in the context of Stack Exchange question classification. We've not only explained key concepts but have also demonstrated their practical application, emphasizing the seamless integration of MLOps practices, including DVC and MLflow. This integration ensures data and model version control, experiment tracking, and reproducibility.
-
-This README represents a summary of the project's educational MLOps integration. For detailed code, data, and model versioning, please refer to the project files.<br>
-
-
-Made with passion by Shivam Gupta.
+**Conclusion**<br>
+This project showcases best practices in MLOps, including experiment tracking, model selection, and deployment preparation. By following the steps outlined in the notebooks, you can learn how to develop and deploy a customer churn prediction model efficiently. The use of MLflow and PyCaret simplifies the process and ensures reproducibility, making it suitable for real-world machine learning projects.<br>
