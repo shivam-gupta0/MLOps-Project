@@ -12,7 +12,17 @@ PyCaret: PyCaret is a powerful library for automating machine learning workflows
 **Project Structure** <br>
 This repository contains the following notebooks:<br><br>
 
-1. mlflow_churn_model_registration.ipynb<br>
+
+
+1. churn_model_development.ipynb<br>
+This notebook focuses on the development of the churn prediction model and its registration with MLflow. It includes:<br>
+
+Setting up MLflow tracking.<br>
+Data preprocessing and setup using PyCaret.<br>
+Model training, selection, and evaluation.<br>
+Saving the best model for deployment.<br><br>
+
+2. mlflow_churn_model_registration.ipynb<br>
 This notebook demonstrates how to register a churn prediction model using MLflow. Key highlights include:<br>
 
 Setting up MLflow tracking to log experiments and model versions.<br>
@@ -20,13 +30,13 @@ Using PyCaret to perform automated machine learning experiments.<br>
 Selecting the best model and visualizing its performance.<br>
 Saving the final model pipeline for deployment.<br><br>
 
-2. churn_model_development.ipynb<br>
-This notebook focuses on the development of the churn prediction model and its registration with MLflow. It includes:<br>
+![models](https://github.com/shivam-gupta0/MLOps-Project/assets/85798077/70ff620c-8c47-438d-83bc-1654b1f1b2b4)
 
-Setting up MLflow tracking.<br>
-Data preprocessing and setup using PyCaret.<br>
-Model training, selection, and evaluation.<br>
-Saving the best model for deployment.<br><br>
+
+![roc](https://github.com/shivam-gupta0/MLOps-Project/assets/85798077/4bfa4457-5916-4f86-b062-d93689d8ed0b)
+![feature](https://github.com/shivam-gupta0/MLOps-Project/assets/85798077/2411b314-5106-42d3-9a2c-2ae783680f00)
+
+
 **Usage**<br>
 To run these notebooks, follow these steps:<br>
 
