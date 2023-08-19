@@ -19,6 +19,7 @@ Setting up MLflow tracking to log experiments and model versions.<br>
 Using PyCaret to perform automated machine learning experiments.<br>
 Selecting the best model and visualizing its performance.<br>
 Saving the final model pipeline for deployment.<br><br>
+
 2. churn_model_development.ipynb<br>
 This notebook focuses on the development of the churn prediction model and its registration with MLflow. It includes:<br>
 
